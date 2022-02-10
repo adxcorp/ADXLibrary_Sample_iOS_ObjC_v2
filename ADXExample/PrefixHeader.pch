@@ -1,0 +1,13 @@
+//
+//  PrefixHeader.pch
+//  ADXExample
+//
+//  Copyright © 2017 AD(X) Corp. All rights reserved.
+//
+
+#define ADX_APP_ID                    @"6200fea42a918d0001000001"
+#define ADX_BANNER_AD_UNIT_AD         @"6200fee42a918d0001000003"
+#define ADX_MREC_AD_UNIT_AD           @"6200feeb2a918d0001000005"
+#define ADX_INTERSTITIAL_AD_UNIT_ID   @"6200fef52a918d0001000007"
+#define ADX_NATIVE_AD_UNIT_ID         @"6200fefc2a918d0001000009"
+#define ADX_REWARDED_AD_UNIT_ID       @"6200ff0c2a918d000100000d"
