@@ -1,17 +1,17 @@
 //
-//  ViewController.m
+//  MainViewController.m
 //  ADXSample
 //
 //  Copyright © 2017 AD(X) Corp. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 
-@interface ViewController ()
+@interface MainViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

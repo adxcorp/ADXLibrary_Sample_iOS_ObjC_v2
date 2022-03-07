@@ -1,22 +1,22 @@
 //
-//  NativeAdViewController.m
+//  NativeViewController.m
 //  ADXSample
 //
 //  Copyright © 2017 AD(X) Corp. All rights reserved.
 //
 
-#import "NativeAdViewController.h"
+#import "NativeViewController.h"
 #import "NativeAdView.h"
 
 #import <ADXLibrary/ADXNativeAdFactory.h>
 
-@interface NativeAdViewController () <ADXNativeAdFactoryDelegate, ADXNativeAdDelegate>
+@interface NativeViewController () <ADXNativeAdFactoryDelegate, ADXNativeAdDelegate>
 
 @property (nonatomic, strong) ADXNativeAd *nativeAd;
 
 @end
 
-@implementation NativeAdViewController
+@implementation NativeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -49,10 +49,10 @@
 
         UIView *nativeAdView = [[ADXNativeAdFactory sharedInstance] getNativeAdView:ADX_NATIVE_AD_UNIT_ID];
 
-        nativeAdView.frame = CGRectMake(0.0,
+        nativeAdView.frame = CGRectMake((self.view.bounds.size.width - 320.0)/2,
                                         100.0,
-                                        [UIScreen mainScreen].bounds.size.width,
-                                        270.0);
+                                        320.0,
+                                        300.0);
         [self.view addSubview:nativeAdView];
     }
 }

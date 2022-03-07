@@ -12,7 +12,7 @@
 
 @interface NativeAdPlacerViewController () <UICollectionViewDataSource, UICollectionViewDelegate, ADXCollectionViewAdPlacerDelegate>
 
-@property (nonatomic, weak) IBOutlet UICollectionView *mainCollectionView;
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) ADXCollectionViewAdPlacer *placer;
 
 @end
@@ -29,7 +29,7 @@
     [adPositioning enableRepeatingPositionsWithInterval:3];
     
     self.placer = [[ADXNativeAdFactory sharedInstance] getCollectionViewAdPlacer:ADX_NATIVE_AD_UNIT_ID
-                                                                  collectionView:self.mainCollectionView
+                                                                  collectionView:self.collectionView
                                                                   viewController:self
                                                                    adPositioning:adPositioning];
     [self.placer loadAdsForAdUnitID:ADX_NATIVE_AD_UNIT_ID];

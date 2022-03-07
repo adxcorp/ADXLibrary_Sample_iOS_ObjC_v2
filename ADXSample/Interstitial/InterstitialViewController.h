@@ -5,7 +5,7 @@
 //  Copyright © 2017 AD(X) Corp. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
 @interface InterstitialViewController : UIViewController
 

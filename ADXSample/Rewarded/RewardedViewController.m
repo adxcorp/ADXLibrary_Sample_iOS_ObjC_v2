@@ -1,21 +1,21 @@
 //
-//  RewardViewController.m
+//  RewardedViewController.m
 //  ADXSample
 //
 //  Copyright © 2017 AD(X) Corp. All rights reserved.
 //
 
-#import "RewardViewController.h"
+#import "RewardedViewController.h"
 
 #import <ADXLibrary/ADXRewardedAd.h>
 
-@interface RewardViewController () <ADXRewardedAdDelegate>
+@interface RewardedViewController () <ADXRewardedAdDelegate>
 
 @property (nonatomic, strong) ADXRewardedAd *rewardedAd;
 
 @end
 
-@implementation RewardViewController
+@implementation RewardedViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

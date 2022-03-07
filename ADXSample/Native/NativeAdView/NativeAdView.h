@@ -12,7 +12,7 @@
 
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic, weak) IBOutlet UILabel *mainTextLabel;
-@property (nonatomic, weak) IBOutlet UILabel *callToActionLabel;
+@property (nonatomic, weak) IBOutlet UIButton *callToActionButton;
 @property (nonatomic, weak) IBOutlet UIImageView *iconImageView;
 @property (nonatomic, weak) IBOutlet UIImageView *mainImageView;
 @property (nonatomic, weak) IBOutlet UIImageView *privacyInformationIconImageView;

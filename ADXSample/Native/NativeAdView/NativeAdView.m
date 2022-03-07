@@ -12,8 +12,7 @@
 - (instancetype)init {
     NativeAdView *result = nil;
     
-    NSBundle* bundle = [NSBundle mainBundle];
-    NSArray *elements = [bundle loadNibNamed:@"NativeAdView" owner:self options:nil];
+    NSArray *elements = [[NSBundle mainBundle] loadNibNamed:@"NativeAdView" owner:self options:nil];
     
     for (id anObject in elements) {
         if ([anObject isKindOfClass:NSClassFromString(@"NativeAdView")]) {
@@ -29,6 +28,9 @@
     [super layoutSubviews];
 }
 
+
+#pragma mark - ADXNativeAdRendering
+
 - (UILabel *)nativeMainTextLabel {
     return self.mainTextLabel;
 }
@@ -37,8 +39,8 @@
     return self.titleLabel;
 }
 
-- (UILabel *)nativeCallToActionTextLabel {
-    return self.callToActionLabel;
+- (UIButton *)nativeCallToActionButton {
+    return self.callToActionButton;
 }
 
 - (UIImageView *)nativeIconImageView {

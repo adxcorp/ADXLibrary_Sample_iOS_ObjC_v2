@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2D11E933C29010FB83148694 /* Pods_ADXSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6828383E4F0CC80906389920 /* Pods_ADXSample.framework */; };
 		8096C8F3273BA2D900F4B424 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8096C8F2273BA2D900F4B424 /* AppDelegate.m */; };
-		8096C8F9273BA2D900F4B424 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8096C8F8273BA2D900F4B424 /* ViewController.m */; };
+		8096C8F9273BA2D900F4B424 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8096C8F8273BA2D900F4B424 /* MainViewController.m */; };
 		8096C8FC273BA2D900F4B424 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8096C8FA273BA2D900F4B424 /* Main.storyboard */; };
 		8096C8FE273BA2D900F4B424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8096C8FD273BA2D900F4B424 /* Assets.xcassets */; };
 		8096C901273BA2D900F4B424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8096C8FF273BA2D900F4B424 /* LaunchScreen.storyboard */; };
@@ -17,10 +17,11 @@
 		8096C977273BAA0100F4B424 /* InterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8096C964273BAA0100F4B424 /* InterstitialViewController.m */; };
 		8096C979273BAA0100F4B424 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8096C968273BAA0100F4B424 /* BannerViewController.m */; };
 		8096C97A273BAA0100F4B424 /* NativeAdPlacerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8096C96B273BAA0100F4B424 /* NativeAdPlacerViewController.m */; };
-		8096C97C273BAA0100F4B424 /* RewardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8096C970273BAA0100F4B424 /* RewardViewController.m */; };
-		8096C97D273BAA0100F4B424 /* NativeAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8096C971273BAA0100F4B424 /* NativeAdViewController.m */; };
+		8096C97C273BAA0100F4B424 /* RewardedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8096C970273BAA0100F4B424 /* RewardedViewController.m */; };
+		8096C97D273BAA0100F4B424 /* NativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8096C971273BAA0100F4B424 /* NativeViewController.m */; };
 		8096C97E273BAA0100F4B424 /* NativeAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8096C973273BAA0100F4B424 /* NativeAdView.m */; };
 		8096C97F273BAA0100F4B424 /* NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8096C974273BAA0100F4B424 /* NativeAdView.xib */; };
+		CC08D09027D5913700F6874C /* AdMobRewardedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC08D08F27D5913700F6874C /* AdMobRewardedViewController.m */; };
 		CC80A4C927B3B2AA001C26D8 /* MRECViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC80A4C827B3B2AA001C26D8 /* MRECViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +38,8 @@
 		8096C8EE273BA2D900F4B424 /* ADXSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADXSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8096C8F1273BA2D900F4B424 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8096C8F2273BA2D900F4B424 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8096C8F7273BA2D900F4B424 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8096C8F8273BA2D900F4B424 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8096C8F7273BA2D900F4B424 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		8096C8F8273BA2D900F4B424 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		8096C8FB273BA2D900F4B424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8096C8FD273BA2D900F4B424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8096C900273BA2D900F4B424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,20 +47,22 @@
 		8096C903273BA2D900F4B424 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8096C964273BAA0100F4B424 /* InterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialViewController.m; sourceTree = "<group>"; };
 		8096C966273BAA0100F4B424 /* NativeAdPlacerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdPlacerViewController.h; sourceTree = "<group>"; };
-		8096C967273BAA0100F4B424 /* RewardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardViewController.h; sourceTree = "<group>"; };
+		8096C967273BAA0100F4B424 /* RewardedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardedViewController.h; sourceTree = "<group>"; };
 		8096C968273BAA0100F4B424 /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
-		8096C96A273BAA0100F4B424 /* NativeAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdViewController.h; sourceTree = "<group>"; };
+		8096C96A273BAA0100F4B424 /* NativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeViewController.h; sourceTree = "<group>"; };
 		8096C96B273BAA0100F4B424 /* NativeAdPlacerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdPlacerViewController.m; sourceTree = "<group>"; };
 		8096C96D273BAA0100F4B424 /* InterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterstitialViewController.h; sourceTree = "<group>"; };
 		8096C96F273BAA0100F4B424 /* BannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
-		8096C970273BAA0100F4B424 /* RewardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardViewController.m; sourceTree = "<group>"; };
-		8096C971273BAA0100F4B424 /* NativeAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdViewController.m; sourceTree = "<group>"; };
+		8096C970273BAA0100F4B424 /* RewardedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardedViewController.m; sourceTree = "<group>"; };
+		8096C971273BAA0100F4B424 /* NativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeViewController.m; sourceTree = "<group>"; };
 		8096C973273BAA0100F4B424 /* NativeAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdView.m; sourceTree = "<group>"; };
 		8096C974273BAA0100F4B424 /* NativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdView.xib; sourceTree = "<group>"; };
 		8096C975273BAA0100F4B424 /* NativeAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdView.h; sourceTree = "<group>"; };
 		8096C976273BAA0100F4B424 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8D4F5DDBD94D1512682CE1CF /* Pods-ADXSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADXSample.release.xcconfig"; path = "Target Support Files/Pods-ADXSample/Pods-ADXSample.release.xcconfig"; sourceTree = "<group>"; };
 		950969AE058D33CBF589737C /* Pods-ADXSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADXSample.debug.xcconfig"; path = "Target Support Files/Pods-ADXSample/Pods-ADXSample.debug.xcconfig"; sourceTree = "<group>"; };
+		CC08D08E27D5913700F6874C /* AdMobRewardedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdMobRewardedViewController.h; sourceTree = "<group>"; };
+		CC08D08F27D5913700F6874C /* AdMobRewardedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdMobRewardedViewController.m; sourceTree = "<group>"; };
 		CC80A4C727B3B2AA001C26D8 /* MRECViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRECViewController.h; sourceTree = "<group>"; };
 		CC80A4C827B3B2AA001C26D8 /* MRECViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRECViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +85,8 @@
 				8096C976273BAA0100F4B424 /* PrefixHeader.pch */,
 				8096C902273BA2D900F4B424 /* Info.plist */,
 				8096C903273BA2D900F4B424 /* main.m */,
+				8096C8FD273BA2D900F4B424 /* Assets.xcassets */,
+				8096C8FF273BA2D900F4B424 /* LaunchScreen.storyboard */,
 			);
 			name = "Support Files";
 			sourceTree = "<group>";
@@ -109,8 +114,10 @@
 		802462B0279F88B9005A1DB4 /* Rewarded */ = {
 			isa = PBXGroup;
 			children = (
-				8096C967273BAA0100F4B424 /* RewardViewController.h */,
-				8096C970273BAA0100F4B424 /* RewardViewController.m */,
+				8096C967273BAA0100F4B424 /* RewardedViewController.h */,
+				8096C970273BAA0100F4B424 /* RewardedViewController.m */,
+				CC08D08E27D5913700F6874C /* AdMobRewardedViewController.h */,
+				CC08D08F27D5913700F6874C /* AdMobRewardedViewController.m */,
 			);
 			path = Rewarded;
 			sourceTree = "<group>";
@@ -118,9 +125,9 @@
 		802462B1279F88C0005A1DB4 /* Native */ = {
 			isa = PBXGroup;
 			children = (
-				8096C972273BAA0100F4B424 /* NativeView */,
-				8096C96A273BAA0100F4B424 /* NativeAdViewController.h */,
-				8096C971273BAA0100F4B424 /* NativeAdViewController.m */,
+				8096C972273BAA0100F4B424 /* NativeAdView */,
+				8096C96A273BAA0100F4B424 /* NativeViewController.h */,
+				8096C971273BAA0100F4B424 /* NativeViewController.m */,
 				8096C966273BAA0100F4B424 /* NativeAdPlacerViewController.h */,
 				8096C96B273BAA0100F4B424 /* NativeAdPlacerViewController.m */,
 			);
@@ -154,10 +161,8 @@
 				802462B0279F88B9005A1DB4 /* Rewarded */,
 				8096C8F1273BA2D900F4B424 /* AppDelegate.h */,
 				8096C8F2273BA2D900F4B424 /* AppDelegate.m */,
-				8096C8F7273BA2D900F4B424 /* ViewController.h */,
-				8096C8F8273BA2D900F4B424 /* ViewController.m */,
-				8096C8FD273BA2D900F4B424 /* Assets.xcassets */,
-				8096C8FF273BA2D900F4B424 /* LaunchScreen.storyboard */,
+				8096C8F7273BA2D900F4B424 /* MainViewController.h */,
+				8096C8F8273BA2D900F4B424 /* MainViewController.m */,
 				8096C8FA273BA2D900F4B424 /* Main.storyboard */,
 				801CD71C273CF865008EAE96 /* Support Files */,
 			);
@@ -180,14 +185,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8096C972273BAA0100F4B424 /* NativeView */ = {
+		8096C972273BAA0100F4B424 /* NativeAdView */ = {
 			isa = PBXGroup;
 			children = (
 				8096C975273BAA0100F4B424 /* NativeAdView.h */,
 				8096C973273BAA0100F4B424 /* NativeAdView.m */,
 				8096C974273BAA0100F4B424 /* NativeAdView.xib */,
 			);
-			path = NativeView;
+			path = NativeAdView;
 			sourceTree = "<group>";
 		};
 		903C04F8EBF8353C8AE8DE61 /* Pods */ = {
@@ -238,7 +243,7 @@
 				};
 			};
 			buildConfigurationList = 8096C8E9273BA2D900F4B424 /* Build configuration list for PBXProject "ADXSample" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -334,14 +339,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8096C979273BAA0100F4B424 /* BannerViewController.m in Sources */,
-				8096C8F9273BA2D900F4B424 /* ViewController.m in Sources */,
+				8096C8F9273BA2D900F4B424 /* MainViewController.m in Sources */,
 				8096C97A273BAA0100F4B424 /* NativeAdPlacerViewController.m in Sources */,
 				CC80A4C927B3B2AA001C26D8 /* MRECViewController.m in Sources */,
-				8096C97C273BAA0100F4B424 /* RewardViewController.m in Sources */,
+				8096C97C273BAA0100F4B424 /* RewardedViewController.m in Sources */,
 				8096C8F3273BA2D900F4B424 /* AppDelegate.m in Sources */,
 				8096C904273BA2D900F4B424 /* main.m in Sources */,
-				8096C97D273BAA0100F4B424 /* NativeAdViewController.m in Sources */,
+				8096C97D273BAA0100F4B424 /* NativeViewController.m in Sources */,
 				8096C977273BAA0100F4B424 /* InterstitialViewController.m in Sources */,
+				CC08D09027D5913700F6874C /* AdMobRewardedViewController.m in Sources */,
 				8096C97E273BAA0100F4B424 /* NativeAdView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
