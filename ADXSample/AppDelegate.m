@@ -9,12 +9,20 @@
 
 #import <ADXLibrary/ADXLibrary.h>
 
-#import <FBAudienceNetwork/FBAudienceNetwork.h>
+#import <FBAudienceNetwork/FBAdSettings.h>
 #import <AppTrackingTransparency/AppTrackingTransparency.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // ADX SDK Initialize
+    ADXConfiguration *configuration = [[ADXConfiguration alloc] initWithAppId:ADX_APP_ID
+                                                                     gdprType:ADXGdprTypePopupLocation];
+    configuration.logLevel = ADXLogLevelDebug;
+    [[ADXSdk sharedInstance] initializeWithConfiguration:configuration
+                                       completionHandler:^(BOOL result, ADXConsentState consentState) {
+        NSLog(@"ADX Sdk Initialize");
+    }];
     
     if (@available(iOS 15.0, *)) {
         UINavigationBarAppearance *navigationBarAppearance = [[UINavigationBarAppearance alloc] init];
@@ -45,23 +53,8 @@
             } else {
                 [FBAdSettings setAdvertiserTrackingEnabled:NO];
             }
-            
-            [self initializeSdk];
         }];
-        
-    } else {
-        [self initializeSdk];
     }
-}
-
-- (void)initializeSdk {
-    ADXConfiguration *configuration = [[ADXConfiguration alloc] initWithAppId:ADX_APP_ID
-                                                                     gdprType:ADXGdprTypePopupLocation];
-    configuration.logLevel = ADXLogLevelDebug;
-    [[ADXSdk sharedInstance] initializeWithConfiguration:configuration
-                                       completionHandler:^(BOOL result, ADXConsentState consentState) {
-        NSLog(@"ADX Sdk Initialize");
-    }];
 }
 
 @end
