@@ -63,7 +63,7 @@
     NSLog(@"rewardedAdDidDismissScreen");
 }
 
-- (void)rewardedAdDidRewardUser:(ADXRewardedAd *)rewwaredAd withReward:(ADXReward *)reward {
+- (void)rewardedAdDidRewardUser:(ADXRewardedAd *)rewardedAd withReward:(ADXReward *)reward {
     NSLog(@"rewardedAdDidRewardUser");
 }
 
