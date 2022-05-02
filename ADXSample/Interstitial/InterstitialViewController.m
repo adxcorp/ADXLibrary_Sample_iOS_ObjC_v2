@@ -11,7 +11,7 @@
 
 @interface InterstitialViewController () <ADXInterstitialAdDelegate>
 
-@property (nonatomic, strong) ADXInterstitialAd *intersititalAd;
+@property (nonatomic, strong) ADXInterstitialAd *interstitialAd;
 
 @end
 
@@ -20,17 +20,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.intersititalAd = [[ADXInterstitialAd alloc] initWithAdUnitId:ADX_INTERSTITIAL_AD_UNIT_ID];
-    self.intersititalAd.delegate = self;
+    self.interstitialAd = [[ADXInterstitialAd alloc] initWithAdUnitId:ADX_INTERSTITIAL_AD_UNIT_ID];
+    self.interstitialAd.delegate = self;
 }
 
 - (IBAction)loadAd:(id)sender {
-    [self.intersititalAd loadAd];
+    [self.interstitialAd loadAd];
 }
 
 - (IBAction)showAd:(id)sender {
-    if (self.intersititalAd.isLoaded) {
-        [self.intersititalAd showAdFromRootViewController:self];
+    if (self.interstitialAd.isLoaded) {
+        [self.interstitialAd showAdFromRootViewController:self];
     }
 }
 

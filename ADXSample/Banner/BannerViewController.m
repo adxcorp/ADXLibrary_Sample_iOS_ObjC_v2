@@ -35,15 +35,15 @@
 
 #pragma mark - ADXAdViewDelegate
 
-- (void)adViewDidLoad:(ADXAdView *)bannerView {
+- (void)adViewDidLoad:(ADXAdView *)adView {
     NSLog(@"adViewDidLoad");
 }
 
-- (void)adView:(ADXAdView *)bannerView didFailToLoadWithError:(NSError *)error {
+- (void)adView:(ADXAdView *)adView didFailToLoadWithError:(NSError *)error {
     NSLog(@"adView:didFailToLoadWithError: %@", error);
     
 }
-- (void)adViewDidClick:(ADXAdView *)bannerView {
+- (void)adViewDidClick:(ADXAdView *)adView {
     NSLog(@"adViewDidClick");
 }
 
