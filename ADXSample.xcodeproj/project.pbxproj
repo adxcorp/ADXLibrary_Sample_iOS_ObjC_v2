@@ -27,14 +27,6 @@
 
 /* Begin PBXFileReference section */
 		6828383E4F0CC80906389920 /* Pods_ADXSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADXSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		805055352782B2E3009302B7 /* ADXLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ADXLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		805055372782B2E3009302B7 /* ADXLibrary-Cauly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = "ADXLibrary-Cauly.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		805055382782B2E3009302B7 /* ADXLibrary-FBAudienceNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = "ADXLibrary-FBAudienceNetwork.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		805055392782B2E3009302B7 /* ADXLibrary-Fyber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = "ADXLibrary-Fyber.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8050553A2782B2E3009302B7 /* ADXLibrary-Pangle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = "ADXLibrary-Pangle.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8050553B2782B2E3009302B7 /* ADXLibrary-Tapjoy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = "ADXLibrary-Tapjoy.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8050553C2782B2E3009302B7 /* ADXLibrary-UnityAds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = "ADXLibrary-UnityAds.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8050553D2782B2E3009302B7 /* ADXLibrary-Vungle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = "ADXLibrary-Vungle.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8096C8EE273BA2D900F4B424 /* ADXSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADXSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8096C8F1273BA2D900F4B424 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8096C8F2273BA2D900F4B424 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -172,14 +164,6 @@
 		8096C90A273BA30600F4B424 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				805055352782B2E3009302B7 /* ADXLibrary.framework */,
-				805055372782B2E3009302B7 /* ADXLibrary-Cauly.framework */,
-				805055382782B2E3009302B7 /* ADXLibrary-FBAudienceNetwork.framework */,
-				805055392782B2E3009302B7 /* ADXLibrary-Fyber.framework */,
-				8050553A2782B2E3009302B7 /* ADXLibrary-Pangle.framework */,
-				8050553B2782B2E3009302B7 /* ADXLibrary-Tapjoy.framework */,
-				8050553C2782B2E3009302B7 /* ADXLibrary-UnityAds.framework */,
-				8050553D2782B2E3009302B7 /* ADXLibrary-Vungle.framework */,
 				6828383E4F0CC80906389920 /* Pods_ADXSample.framework */,
 			);
 			name = Frameworks;
