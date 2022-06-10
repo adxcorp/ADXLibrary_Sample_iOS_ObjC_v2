@@ -37,15 +37,15 @@
 #pragma mark - ADXInterstitialAdDelegate
 
 - (void)interstitialAdDidLoad:(ADXInterstitialAd *)interstitial {
-    NSLog(@"interstitialDidLoadAd");
+    NSLog(@"interstitialAdDidLoad");
 }
 
 - (void)interstitialAd:(ADXInterstitialAd *)interstitialAd didFailToLoadWithError:(NSError *)error {
-    NSLog(@"interstitial:didFailToLoadWithError: %@", error);
+    NSLog(@"interstitialAd:didFailToLoadWithError: %@", error);
 }
 
 - (void)interstitialAd:(ADXInterstitialAd *)interstitialAd didFailToShowWithError:(NSError *)error {
-    NSLog(@"interstitial:didFailToShowWithError: %@", error);
+    NSLog(@"interstitialAd:didFailToShowWithError: %@", error);
 }
 
 - (void)interstitialAdWillPresentScreen:(ADXInterstitialAd *)interstitialAd {
