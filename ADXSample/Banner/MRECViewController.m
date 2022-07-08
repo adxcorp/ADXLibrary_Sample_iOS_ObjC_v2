@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.adView = [[ADXAdView alloc] initWithAdUnitId:ADX_MREC_AD_UNIT_AD
+    self.adView = [[ADXAdView alloc] initWithAdUnitId:ADX_MREC_AD_UNIT_ID
                                                adSize:ADXAdSizeMediumRectangle
                                    rootViewController:self];
     self.adView.delegate = self;
