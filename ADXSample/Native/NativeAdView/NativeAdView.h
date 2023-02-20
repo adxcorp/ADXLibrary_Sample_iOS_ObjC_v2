@@ -10,12 +10,12 @@
 
 @interface NativeAdView : UIView <ADXNativeAdRendering>
 
-@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
-@property (nonatomic, weak) IBOutlet UILabel *mainTextLabel;
-@property (nonatomic, weak) IBOutlet UIButton *callToActionButton;
-@property (nonatomic, weak) IBOutlet UIImageView *iconImageView;
-@property (nonatomic, weak) IBOutlet UIImageView *mainImageView;
-@property (nonatomic, weak) IBOutlet UIImageView *privacyInformationIconImageView;
+@property (weak) IBOutlet UILabel *titleLabel;
+@property (weak) IBOutlet UILabel *mainTextLabel;
+@property (weak) IBOutlet UIButton *callToActionButton;
+@property (weak) IBOutlet UIImageView *iconImageView;
+@property (weak) IBOutlet UIImageView *mainImageView;
+@property (weak) IBOutlet UIImageView *privacyInformationIconImageView;
 
 - (instancetype)init;
 

@@ -11,7 +11,7 @@
 
 @interface RewardedViewController () <ADXRewardedAdDelegate>
 
-@property (nonatomic, strong) ADXRewardedAd *rewardedAd;
+@property (strong) ADXRewardedAd *rewardedAd;
 
 @end
 

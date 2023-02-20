@@ -11,7 +11,7 @@
 
 @interface InterstitialViewController () <ADXInterstitialAdDelegate>
 
-@property (nonatomic, strong) ADXInterstitialAd *interstitialAd;
+@property (strong) ADXInterstitialAd *interstitialAd;
 
 @end
 

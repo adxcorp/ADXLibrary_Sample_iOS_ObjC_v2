@@ -12,7 +12,7 @@
 
 @interface NativeViewController () <ADXNativeAdFactoryDelegate, ADXNativeAdDelegate>
 
-@property (nonatomic, strong) ADXNativeAd *nativeAd;
+@property (strong) ADXNativeAd *nativeAd;
 
 @end
 

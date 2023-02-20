@@ -12,8 +12,8 @@
 
 @interface NativeAdPlacerViewController () <UICollectionViewDataSource, UICollectionViewDelegate, ADXCollectionViewAdPlacerDelegate>
 
-@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
-@property (nonatomic, strong) ADXCollectionViewAdPlacer *placer;
+@property (weak) IBOutlet UICollectionView *collectionView;
+@property (strong) ADXCollectionViewAdPlacer *placer;
 
 @end
 

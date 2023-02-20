@@ -12,7 +12,7 @@
 
 @interface AdMobRewardedViewController () <GADFullScreenContentDelegate>
 
-@property(nonatomic, strong) GADRewardedAd *rewardedAd;
+@property(strong) GADRewardedAd *rewardedAd;
 
 @end
 

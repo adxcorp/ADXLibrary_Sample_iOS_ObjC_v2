@@ -11,7 +11,7 @@
 
 @interface MRECViewController () <ADXAdViewDelegate>
 
-@property (nonatomic, strong) ADXAdView *adView;
+@property (strong) ADXAdView *adView;
 
 @end
 
