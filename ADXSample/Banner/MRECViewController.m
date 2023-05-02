@@ -23,13 +23,16 @@
     self.adView = [[ADXAdView alloc] initWithAdUnitId:ADX_MREC_AD_UNIT_ID
                                                adSize:ADXAdSizeMediumRectangle
                                    rootViewController:self];
-    self.adView.delegate = self;
-    self.adView.frame = CGRectMake((self.view.bounds.size.width - ADXAdSizeMediumRectangle.width) / 2,
-                                   0,
-                                   ADXAdSizeMediumRectangle.width,
-                                   ADXAdSizeMediumRectangle.height);
     
+    [self.adView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.adView.delegate = self;
     [self.view addSubview:self.adView];
+    [NSLayoutConstraint activateConstraints:@[
+        [_adView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
+        [_adView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor],
+        [_adView.widthAnchor constraintEqualToConstant:ADXAdSizeMediumRectangle.width],
+        [_adView.heightAnchor constraintEqualToConstant:ADXAdSizeMediumRectangle.height],
+    ]];
     [self.adView loadAd];
 }
 
