@@ -37,6 +37,17 @@
     [[ADXNativeAdFactory sharedInstance] removeDelegate:self];
 }
 
+- (void)addAdTagLabel:(UIView*) nativeAdView {
+    UIView* adTagView = [[UIView alloc] initWithFrame: CGRectMake(10, 0, 30, 20)];
+    adTagView.backgroundColor = [UIColor orangeColor];
+    adTagView.layer.cornerRadius = 5;
+    UILabel* adTagLabel = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, 30, 20)];
+    [adTagLabel setText:@"Ad"];
+    [adTagLabel setTextAlignment:NSTextAlignmentCenter];
+    [adTagLabel setTextColor:[UIColor whiteColor]];
+    [adTagView addSubview:adTagLabel];
+    [nativeAdView addSubview:adTagView];
+}
 
 #pragma mark - ADXNativeAdFactoryDelegate
 
