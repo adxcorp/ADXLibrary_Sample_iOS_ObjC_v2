@@ -39,14 +39,17 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    [self requestIDFA];
+    // 프로그래밍 방식으로 수동으로 ATT (App Tracking Transparency) 동의 요청 할 경우에만, 아래 코드를 사용.
+    // [self requestIDFA];
+    
+    // 애드몹 UMP (User Messaging Platform)의 IDFA 메시지를 통한 ATT (App Tracking Transparency) 동의 요청 권장
+    // 참조 링크: https://docs.adxcorp.kr/appendix/ump-user-messaging-platform
 }
 
 - (void)requestIDFA {
     if (@available(iOS 14, *)) {
         // ATT 알림을 통한 권한 요청
         [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
-            
             // 광고추적제한 설정 (페이스북 광고)
             if (status == ATTrackingManagerAuthorizationStatusAuthorized) {
                 [FBAdSettings setAdvertiserTrackingEnabled:YES];
