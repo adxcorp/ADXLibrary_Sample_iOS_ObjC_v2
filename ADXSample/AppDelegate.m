@@ -24,17 +24,6 @@
         NSLog(@"ADX Sdk Initialize");
     }];
     
-    if (@available(iOS 15.0, *)) {
-        UINavigationBarAppearance *navigationBarAppearance = [[UINavigationBarAppearance alloc] init];
-        [navigationBarAppearance configureWithOpaqueBackground];
-        navigationBarAppearance.backgroundColor = [UIColor whiteColor];
-        [navigationBarAppearance setTitleTextAttributes: @{ NSForegroundColorAttributeName: [UIColor blackColor] }];
-        
-        UINavigationBar.appearance.standardAppearance = navigationBarAppearance;
-        UINavigationBar.appearance.scrollEdgeAppearance = navigationBarAppearance;
-        UINavigationBar.appearance.translucent = NO;
-    }
-    
     return YES;
 }
 
