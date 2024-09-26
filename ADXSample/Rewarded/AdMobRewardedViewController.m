@@ -68,12 +68,20 @@
     NSLog(@"adDidRecordImpression");
 }
 
+- (void)adDidRecordClick:(id<GADFullScreenPresentingAd>)ad {
+    NSLog(@"adDidRecordClick");
+}
+
 - (void)ad:(id<GADFullScreenPresentingAd>)ad didFailToPresentFullScreenContentWithError:(NSError *)error {
     NSLog(@"Rewarded ad failed to present.");
 }
 
-- (void)adDidPresentFullScreenContent:(id<GADFullScreenPresentingAd>)ad {
-    NSLog(@"Rewarded ad presented");
+- (void)adWillPresentFullScreenContent:(id<GADFullScreenPresentingAd>)ad {
+    NSLog(@"adWillPresentFullScreenContent");
+}
+
+- (void)adWillDismissFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
+    NSLog(@"adWillDismissFullScreenContent");
 }
 
 - (void)adDidDismissFullScreenContent:(id<GADFullScreenPresentingAd>)ad {
