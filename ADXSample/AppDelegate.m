@@ -39,12 +39,7 @@
     if (@available(iOS 14.5, *)) {
         // ATT 알림을 통한 권한 요청
         [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
-            // 광고추적제한 설정 (페이스북 광고)
-            if (status == ATTrackingManagerAuthorizationStatusAuthorized) {
-                [FBAdSettings setAdvertiserTrackingEnabled:YES];
-            } else {
-                [FBAdSettings setAdvertiserTrackingEnabled:NO];
-            }
+            
         }];
     }
 }
