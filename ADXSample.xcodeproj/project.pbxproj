@@ -21,7 +21,6 @@
 		8096C97D273BAA0100F4B424 /* NativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8096C971273BAA0100F4B424 /* NativeViewController.m */; };
 		8096C97E273BAA0100F4B424 /* NativeAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8096C973273BAA0100F4B424 /* NativeAdView.m */; };
 		8096C97F273BAA0100F4B424 /* NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8096C974273BAA0100F4B424 /* NativeAdView.xib */; };
-		CC08D09027D5913700F6874C /* AdMobRewardedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC08D08F27D5913700F6874C /* AdMobRewardedViewController.m */; };
 		CC80A4C927B3B2AA001C26D8 /* MRECViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC80A4C827B3B2AA001C26D8 /* MRECViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +52,6 @@
 		8096C976273BAA0100F4B424 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8D4F5DDBD94D1512682CE1CF /* Pods-ADXSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADXSample.release.xcconfig"; path = "Target Support Files/Pods-ADXSample/Pods-ADXSample.release.xcconfig"; sourceTree = "<group>"; };
 		950969AE058D33CBF589737C /* Pods-ADXSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADXSample.debug.xcconfig"; path = "Target Support Files/Pods-ADXSample/Pods-ADXSample.debug.xcconfig"; sourceTree = "<group>"; };
-		CC08D08E27D5913700F6874C /* AdMobRewardedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdMobRewardedViewController.h; sourceTree = "<group>"; };
-		CC08D08F27D5913700F6874C /* AdMobRewardedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdMobRewardedViewController.m; sourceTree = "<group>"; };
 		CC80A4C727B3B2AA001C26D8 /* MRECViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRECViewController.h; sourceTree = "<group>"; };
 		CC80A4C827B3B2AA001C26D8 /* MRECViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRECViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,8 +105,6 @@
 			children = (
 				8096C967273BAA0100F4B424 /* RewardedViewController.h */,
 				8096C970273BAA0100F4B424 /* RewardedViewController.m */,
-				CC08D08E27D5913700F6874C /* AdMobRewardedViewController.h */,
-				CC08D08F27D5913700F6874C /* AdMobRewardedViewController.m */,
 			);
 			path = Rewarded;
 			sourceTree = "<group>";
@@ -331,7 +326,6 @@
 				8096C904273BA2D900F4B424 /* main.m in Sources */,
 				8096C97D273BAA0100F4B424 /* NativeViewController.m in Sources */,
 				8096C977273BAA0100F4B424 /* InterstitialViewController.m in Sources */,
-				CC08D09027D5913700F6874C /* AdMobRewardedViewController.m in Sources */,
 				8096C97E273BAA0100F4B424 /* NativeAdView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
