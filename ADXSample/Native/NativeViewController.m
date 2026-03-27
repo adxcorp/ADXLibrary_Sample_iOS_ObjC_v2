@@ -59,12 +59,17 @@
         self.nativeAd.delegate = self;
 
         UIView *nativeAdView = [[ADXNativeAdFactory sharedInstance] getNativeAdView:ADX_NATIVE_AD_UNIT_ID];
-
-        nativeAdView.frame = CGRectMake((self.view.bounds.size.width - 320.0)/2,
-                                        100.0,
-                                        320.0,
-                                        300.0);
-        [self.view addSubview:nativeAdView];
+        if (nativeAdView) {
+            [self.view addSubview:nativeAdView];
+            nativeAdView.translatesAutoresizingMaskIntoConstraints = NO;
+            [NSLayoutConstraint activateConstraints:@[
+                [nativeAdView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
+                [nativeAdView.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:100.0],
+                [nativeAdView.widthAnchor constraintEqualToConstant:320.0],
+                [nativeAdView.heightAnchor constraintEqualToConstant:300.0]
+            ]];
+            [self.view layoutIfNeeded];
+        }
     }
 }
 
