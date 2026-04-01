@@ -22,16 +22,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[ADXNativeAdFactory sharedInstance] setRenderingViewClass:ADX_NATIVE_AD_UNIT_ID renderingViewClass:[NativeAdView class]];
+    [[ADXNativeAdFactory sharedInstance] setRenderingViewClass:ADX_NATIVE_AD_UNIT_ID
+                                            renderingViewClass:[NativeAdView class]];
     
     ADXAdPositioning *adPositioning = [ADXAdPositioning positioning];
     [adPositioning addFixedIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     [adPositioning enableRepeatingPositionsWithInterval:3];
     
-    self.placer = [[ADXNativeAdFactory sharedInstance] getCollectionViewAdPlacer:ADX_NATIVE_AD_UNIT_ID
-                                                                  collectionView:self.collectionView
-                                                                  viewController:self
-                                                                   adPositioning:adPositioning];
+    ADXNativeViewSizeHandler sizeHandler = ^CGSize(CGFloat maximumWidth) {
+        return CGSizeMake(maximumWidth, 300.0);
+    };
+    
+    self.placer = [[ADXNativeAdFactory sharedInstance]
+        getCollectionViewAdPlacer:ADX_NATIVE_AD_UNIT_ID
+                   collectionView:self.collectionView
+                   viewController:self
+                   viewSizeHandler:sizeHandler
+                   adPositioning:adPositioning];
+    
     [self.placer loadAdsForAdUnitID:ADX_NATIVE_AD_UNIT_ID];
 }
 
