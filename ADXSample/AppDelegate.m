@@ -35,13 +35,52 @@
     // 참조 링크: https://docs.adxcorp.kr/appendix/ump-user-messaging-platform
 }
 
-- (void)requestIDFA {
-    if (@available(iOS 14.5, *)) {
-        // ATT 알림을 통한 권한 요청
-        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
-            
-        }];
-    }
+- (void)requestTrackingPermission:(void (^)(BOOL granted))completion {
+   if (@available(iOS 14, *)) { } else {
+       dispatch_async(dispatch_get_main_queue(), ^{
+           if (completion) completion(YES);
+       });
+       return;
+   }
+
+   ATTrackingManagerAuthorizationStatus status = ATTrackingManager.trackingAuthorizationStatus;
+   if (status == ATTrackingManagerAuthorizationStatusAuthorized) {
+       dispatch_async(dispatch_get_main_queue(), ^{
+           if (completion) completion(YES);
+       });
+       return;
+   } else if (status == ATTrackingManagerAuthorizationStatusDenied ||
+              status == ATTrackingManagerAuthorizationStatusRestricted) {
+       dispatch_async(dispatch_get_main_queue(), ^{
+           if (completion) completion(NO);
+       });
+       return;
+   }
+
+   void (^requestBlock)(void) = ^{
+       [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+           dispatch_async(dispatch_get_main_queue(), ^{
+               if (completion) completion(status == ATTrackingManagerAuthorizationStatusAuthorized);
+           });
+       }];
+   };
+
+   if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
+       requestBlock();
+       return;
+   }
+
+   __block id observer = nil;
+   observer = [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidBecomeActiveNotification
+                                                                object:nil
+                                                                 queue:[NSOperationQueue mainQueue]
+                                                            usingBlock:^(NSNotification * _Nonnull note) {
+       if (observer) {
+           [[NSNotificationCenter defaultCenter] removeObserver:observer];
+           observer = nil;
+       }
+       requestBlock();
+   }];
 }
 
 @end
