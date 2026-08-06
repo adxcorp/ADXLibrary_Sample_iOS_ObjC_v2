@@ -20,7 +20,6 @@
 		8096C97C273BAA0100F4B424 /* RewardedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8096C970273BAA0100F4B424 /* RewardedViewController.m */; };
 		8096C97D273BAA0100F4B424 /* NativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8096C971273BAA0100F4B424 /* NativeViewController.m */; };
 		8096C97E273BAA0100F4B424 /* NativeAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8096C973273BAA0100F4B424 /* NativeAdView.m */; };
-		8096C97F273BAA0100F4B424 /* NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8096C974273BAA0100F4B424 /* NativeAdView.xib */; };
 		CC80A4C927B3B2AA001C26D8 /* MRECViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC80A4C827B3B2AA001C26D8 /* MRECViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +46,6 @@
 		8096C970273BAA0100F4B424 /* RewardedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardedViewController.m; sourceTree = "<group>"; };
 		8096C971273BAA0100F4B424 /* NativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeViewController.m; sourceTree = "<group>"; };
 		8096C973273BAA0100F4B424 /* NativeAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdView.m; sourceTree = "<group>"; };
-		8096C974273BAA0100F4B424 /* NativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdView.xib; sourceTree = "<group>"; };
 		8096C975273BAA0100F4B424 /* NativeAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdView.h; sourceTree = "<group>"; };
 		8096C976273BAA0100F4B424 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8D4F5DDBD94D1512682CE1CF /* Pods-ADXSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADXSample.release.xcconfig"; path = "Target Support Files/Pods-ADXSample/Pods-ADXSample.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 			children = (
 				8096C975273BAA0100F4B424 /* NativeAdView.h */,
 				8096C973273BAA0100F4B424 /* NativeAdView.m */,
-				8096C974273BAA0100F4B424 /* NativeAdView.xib */,
 			);
 			path = NativeAdView;
 			sourceTree = "<group>";
@@ -244,7 +241,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8096C97F273BAA0100F4B424 /* NativeAdView.xib in Resources */,
 				8096C901273BA2D900F4B424 /* LaunchScreen.storyboard in Resources */,
 				8096C8FE273BA2D900F4B424 /* Assets.xcassets in Resources */,
 				8096C8FC273BA2D900F4B424 /* Main.storyboard in Resources */,

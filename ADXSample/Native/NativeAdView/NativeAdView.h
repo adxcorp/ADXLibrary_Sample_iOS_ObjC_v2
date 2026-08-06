@@ -8,15 +8,19 @@
 #import <UIKit/UIKit.h>
 #import <ADXLibrary/ADXNativeAdRendering.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NativeAdView : UIView <ADXNativeAdRendering>
 
-@property (weak) IBOutlet UILabel *titleLabel;
-@property (weak) IBOutlet UILabel *mainTextLabel;
-@property (weak) IBOutlet UIButton *callToActionButton;
-@property (weak) IBOutlet UIImageView *iconImageView;
-@property (weak) IBOutlet UIImageView *mainImageView;
-@property (weak) IBOutlet UIImageView *privacyInformationIconImageView;
+@property (weak) UILabel *titleLabel;
+@property (weak) UILabel *mainTextLabel;
+@property (weak) UIButton *callToActionButton;
+@property (weak) UIImageView *iconImageView;
+@property (weak) UIImageView *mainImageView;
+@property (weak) UIImageView *privacyInformationIconImageView;
 
 - (instancetype)init;
 
 @end
+
+NS_ASSUME_NONNULL_END
