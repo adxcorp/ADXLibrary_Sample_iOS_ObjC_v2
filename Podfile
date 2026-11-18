@@ -1,28 +1,30 @@
 source 'https://github.com/adxcorp/AdxLibrary_iOS_Release.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '13.0'
+platform :ios, '15.0'
 
 target 'ADXSample' do
   use_frameworks!
 
   # 라이브러리 전체를 포함할 경우 
-  pod 'ADXLibrary', '2.8.5'
+  pod 'ADXLibrary', '2.9.2'
 
   # 네이티브만 포함할 경우
-  # pod 'ADXLibrary/Native', '2.8.5'
+  # pod 'ADXLibrary/Native', '2.9.2'
 
   # 전면/배너만 포함할 경우
-  # pod 'ADXLibrary/Standard', '2.8.5'
+  # pod 'ADXLibrary/Standard', '2.9.2'
 
   # 리워드만 포함할 경우 
-  # pod 'ADXLibrary/Rewarded', '2.8.5'
+  # pod 'ADXLibrary/Rewarded', '2.9.2'
 
 end
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+
         xcconfig_path = config.base_configuration_reference.real_path
         xcconfig = File.read(xcconfig_path)
         xcconfig_mod = xcconfig.gsub(/DT_TOOLCHAIN_DIR/, "TOOLCHAIN_DIR")
